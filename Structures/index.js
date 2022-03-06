@@ -26,4 +26,6 @@ require("../Systems/GiveawaySys")(client);
     require(`./Handlers/${handler}`)(client, PG, Ascii);
 });
 
+require("../Web/index");
+
 client.login(process.env.TOKEN);

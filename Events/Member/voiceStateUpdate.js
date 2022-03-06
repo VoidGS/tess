@@ -54,8 +54,47 @@ module.exports = {
                 // Line
                 url = "https://www.youtube.com/watch?v=7rMZjLFYQBQ";
                 break;
-
-
+            
+            case "328648452307288064":
+                // Gama
+                url = "https://www.youtube.com/shorts/yiJVZknbCCM";
+                break;
+            
+            case "534541729530118146":
+                // Souza
+                url = "https://www.youtube.com/watch?v=jP_oLOfpx6k";
+                break;
+            
+            case "299285996267372544":
+                // Gang
+                url = "https://www.youtube.com/watch?v=UsosVL3wPHY";
+                break;
+            
+            case "757037526589374496":
+                // Minion
+                url = "https://www.youtube.com/shorts/l6_q5oykDrk";
+                break;
+            
+            case "266232400894230528":
+                // Nikk
+                url = "https://www.youtube.com/watch?v=_ahNQtRJXDg";
+                break;
+            
+            case "700935066171342939":
+                // Clara
+                url = "https://www.youtube.com/shorts/cFwzjREG464";
+                break;
+            
+            case "276769148141305857":
+                // Fefeno
+                url = "https://www.youtube.com/watch?v=ZFuNAp-rGv0";
+                break;
+            
+            case "681698133721481370":
+                // Tonhao
+                url = "https://www.youtube.com/watch?v=ZdjGahxxoIc";
+                break;
+            
             default:
                 break;
         }

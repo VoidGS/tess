@@ -10,17 +10,16 @@ module.exports = {
      */
     async execute(interaction) {
         const target = await interaction.guild.members.fetch(interaction.targetId);
-        const { user } = interaction;
 
         let author = {
-            name: user.tag,
-            iconURL: user.avatarURL({dynamic: true, size: 512})
+            name: target.user.tag,
+            iconURL: target.user.avatarURL({dynamic: true, size: 512})
         }
 
         const Response = new MessageEmbed()
         .setColor("AQUA")
         .setAuthor(author)
-        .setThumbnail(user.avatarURL({dynamic: true, size: 512}))
+        .setThumbnail(target.user.avatarURL({dynamic: true, size: 512}))
         .addField("ID", `${target.user.id}`)
         .addField("Roles", `${target.roles.cache.map(r => r).join(" ").replace("@everyone", "") || "None"}`)
         .addField("Member since", `<t:${parseInt(target.joinedTimestamp / 1000)}:R>`, true)
