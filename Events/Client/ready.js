@@ -12,6 +12,15 @@ module.exports = {
         // console.log("Tess limda te amo");
         client.user.setActivity("SOU LINDA", {type: "COMPETING"});
 
+        // function start() {
+        //     setTimeout(function() {
+        //         console.log('Bixa');
+        //         client.users.cache.get('509552755703152640').send("Gay 🤮");
+        //         start();
+        //     }, 3000);
+        // }
+        // start();
+
         if (!Database) return;
         mongoose.connect(Database, {
             useNewUrlParser: true,
