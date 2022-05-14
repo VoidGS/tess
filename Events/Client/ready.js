@@ -9,17 +9,9 @@ module.exports = {
      * @param {Client} client
      */ 
     execute(client) {
-        // console.log("Tess limda te amo");
         client.user.setActivity("SOU LINDA", {type: "COMPETING"});
 
-        // function start() {
-        //     setTimeout(function() {
-        //         console.log('Bixa');
-        //         client.users.cache.get('509552755703152640').send("Gay 🤮");
-        //         start();
-        //     }, 3000);
-        // }
-        // start();
+        require("../../Systems/LockdownSys")(client);
 
         if (!Database) return;
         mongoose.connect(Database, {
