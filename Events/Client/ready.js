@@ -9,7 +9,7 @@ module.exports = {
      * @param {Client} client
      */ 
     execute(client) {
-        client.user.setActivity("SOU LINDA", {type: "COMPETING"});
+        client.user.setActivity("NICOLAS CADELA", {type: "COMPETING"});
 
         require("../../Systems/LockdownSys")(client);
 
