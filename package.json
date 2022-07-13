@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "@discordjs/opus": "^0.7.0",
+    "@discordjs/opus": "^0.8.0",
     "@distube/spotify": "^1.2.0",
+    "@distube/ytdl-core": "^4.11.3",
     "ascii-table": "^0.0.9",
     "axios": "^0.26.1",
     "canvas": "^2.9.0",

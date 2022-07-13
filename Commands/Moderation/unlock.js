@@ -4,7 +4,6 @@ const DB = require("../../Structures/Schemas/LockDown");
 module.exports = {
     name: "unlock",
     description: "Lift a lockdown from a channel",
-    permission: "MANAGE_CHANNELS",
     /**
      * 
      * @param {CommandInteraction} interaction 

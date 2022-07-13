@@ -4,7 +4,6 @@ const ms = require("ms");
 module.exports = {
     name: "giveaway",
     description: "A complete giveaway system.",
-    permission: "ADMINISTRATOR",
     options: [
         {
             name: "start",

@@ -5,7 +5,6 @@ require("../../Events/Client/ready");
 module.exports = {
     name: "status",
     description: "Displays the status of the client and database connection.",
-    permission: "ADMINISTRATOR",
     /**
      * 
      * @param {CommandInteraction} interaction 

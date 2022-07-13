@@ -3,7 +3,6 @@ const { CommandInteraction, MessageEmbed } = require("discord.js");
 module.exports = {
     name: "clear",
     description: "Deletes a specified number of messages.",
-    permission: "MANAGE_MESSAGES",
     options: [
         {
             name: "amount",

@@ -5,7 +5,6 @@ const ms = require("ms");
 module.exports = {
     name: "lock",
     description: "Lockdown this channel",
-    permission: "MANAGE_CHANNELS",
     options: [
         {
             name: "time",

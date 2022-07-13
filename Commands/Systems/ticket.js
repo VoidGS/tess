@@ -4,7 +4,6 @@ require("dotenv").config();
 module.exports = {
     name: "ticket",
     description: "Setup your ticket message.",
-    permission: "ADMINISTRATOR",
     /**
      * 
      * @param {CommandInteraction} interaction 

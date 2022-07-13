@@ -3,7 +3,6 @@ const { CommandInteraction } = require("discord.js");
 module.exports = {
     name: "say",
     description: "Says the message",
-    permission: "ADMINISTRATOR",
     options: [
         {
             name: "text",

@@ -5,7 +5,6 @@ const hypixel = new Hypixel.Client("9cc30192-b6f7-43d8-8297-caffb415bbfc");
 module.exports = {
     name: "hypixel",
     description: "Get the hypixel stats from a user.",
-    permission: "ADMINISTRATOR",
     options: [
         {
             name: "player",
