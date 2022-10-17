@@ -20,7 +20,7 @@ module.exports = {
         const Embed = new EmbedBuilder()
             .setColor("Blurple")
             .setDescription(`📁 **${displayMember.nickname != null ? displayMember.nickname : displayMember.user.username}** avatar's`)
-            .setImage(displayMember.user.avatarURL({dynamic: true, size: 512}))
+            .setImage(displayMember.user.avatarURL({ size: 512 }))
             .setFooter({
                 text: user.tag,
                 iconURL: user.avatarURL()
