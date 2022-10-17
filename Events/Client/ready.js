@@ -1,26 +1,12 @@
-const { Client } = require("discord.js");
-const mongoose = require("mongoose");
-const Database = process.env.DATABASE;
+const { loadCommands } = require("../../Handlers/commandHandler");
 
 module.exports = {
     name: "ready",
     once: true,
-    /**
-     * @param {Client} client
-     */ 
     execute(client) {
-        client.user.setActivity("SOU LINDA", {type: "COMPETING"});
-
-        require("../../Systems/LockdownSys")(client);
-
-        if (!Database) return;
-        mongoose.connect(Database, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        }).then(() => {
-            // console.log("The client is now connected to the database.")
-        }).catch((err) => {
-            console.log(err)
-        });
+        loadCommands(client);
+        
+        console.log(`${client.user.username} logged in`);
+        client.user.setActivity(`sou limda`);
     }
 }
