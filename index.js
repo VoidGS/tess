@@ -19,7 +19,7 @@ client.events = new Collection();
 client.commands = new Collection();
 client.subCommands = new Collection();
 
-connect(client.config.DatabaseURL, {
+connect(process.env.DATABASE, {
 
 }).then(() => { console.log("The client is now connected to the database") });
 
