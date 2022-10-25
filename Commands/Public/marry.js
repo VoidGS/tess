@@ -23,7 +23,7 @@ module.exports = {
 
         const Embed = new EmbedBuilder()
             .setColor("LuminousVividPink")
-            .setTitle(`🌷 ${member} married ${target} 🌷`)
+            .setDescription(`**🌷 ${member} married ${target} 🌷**`)
 
         return interaction.reply({
             embeds: [Embed]
