@@ -29,15 +29,14 @@ module.exports = {
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
 
-        return interaction.reply({ files: [attachment] });
-
         const Embed = new EmbedBuilder()
             .setColor("LuminousVividPink")
             .setDescription(`**🌷 ${member} married ${target} 🌷**`)
             .setImage('attachment://marriage.png');
 
         return interaction.reply({
-            embeds: [Embed]
+            embeds: [Embed],
+            files: attachment
         });
 
         // Member
