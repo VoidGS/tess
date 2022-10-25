@@ -36,7 +36,7 @@ module.exports = {
         context.beginPath();
 
         // Start the arc to form a circle
-        context.arc(150, 150, 100, 0, Math.PI * 2, true);
+        context.arc(150, 150, 75, 0, Math.PI * 2, true);
 
         // Put the pen down
         context.closePath();
