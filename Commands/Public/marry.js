@@ -36,7 +36,7 @@ module.exports = {
         context.beginPath();
 
         // Start the arc to form a circle
-        context.arc(150, 150, 75, 0, Math.PI * 2, true);
+        context.arc(150, 125, 75, 0, Math.PI * 2, true);
 
         // Put the pen down
         context.closePath();
@@ -47,7 +47,7 @@ module.exports = {
         context.restore();
 
         // Draw a shape onto the main canvas
-        context.drawImage(avatar, 75, 75, 150, 150);
+        context.drawImage(avatar, 75, 50, 150, 150);
 
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
