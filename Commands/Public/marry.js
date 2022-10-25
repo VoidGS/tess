@@ -32,6 +32,9 @@ module.exports = {
         // If you don't care about the performance of HTTP requests, you can instead load the avatar using
         // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
 
+        // Draw a shape onto the main canvas
+        context.drawImage(avatar, 50, 50, 150, 150);
+
         // Pick up the pen
         context.beginPath();
 
@@ -44,9 +47,6 @@ module.exports = {
         // Clip off the region you drew on
         context.strokeStyle = '#000000';
         context.stroke();
-
-        // Draw a shape onto the main canvas
-        context.drawImage(avatar, 50, 50, 150, 150);
 
         context.restore();
 
