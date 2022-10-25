@@ -33,7 +33,7 @@ module.exports = {
         // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
 
         // Draw a shape onto the main canvas
-        context.drawImage(avatar, 25, 25, 200, 200);
+        context.drawImage(avatar, 50, 50, 150, 150);
 
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
