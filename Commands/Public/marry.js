@@ -21,13 +21,15 @@ module.exports = {
         const canvas = Canvas.createCanvas(700, 250);
 		const context = canvas.getContext('2d');
 
-        const background = await Canvas.loadImage('./Img/marry-back.jpeg');
+        const background = await Canvas.loadImage('./Img/marry-back.jpg');
 
         // This uses the canvas dimensions to stretch the image onto the entire canvas
         context.drawImage(background, 0, 0, canvas.width, canvas.height);
 
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
+
+        return interaction.reply({ files: [attachment] });
 
         const Embed = new EmbedBuilder()
             .setColor("LuminousVividPink")
