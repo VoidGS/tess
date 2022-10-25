@@ -26,6 +26,16 @@ module.exports = {
         // This uses the canvas dimensions to stretch the image onto the entire canvas
         context.drawImage(background, 0, 0, canvas.width, canvas.height);
 
+        // Using undici to make HTTP requests for better performance
+        const { body } = await request(interaction.user.displayAvatarURL({ extension: 'jpg' }));
+        const avatar = await Canvas.loadImage(await body.arrayBuffer());
+
+        // If you don't care about the performance of HTTP requests, you can instead load the avatar using
+        // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
+
+        // Draw a shape onto the main canvas
+        context.drawImage(avatar, 25, 25, 200, 200);
+
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
 
