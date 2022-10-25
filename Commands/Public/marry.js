@@ -47,7 +47,7 @@ module.exports = {
         context.restore();
 
         // Draw a shape onto the main canvas
-        context.drawImage(avatar, 50, 50, 150, 150);
+        context.drawImage(avatar, 75, 75, 150, 150);
 
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
