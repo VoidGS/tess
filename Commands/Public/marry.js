@@ -32,9 +32,6 @@ module.exports = {
         // If you don't care about the performance of HTTP requests, you can instead load the avatar using
         // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
 
-        // Draw a shape onto the main canvas
-        context.drawImage(avatar, 25, 25, 200, 200);
-
         // Pick up the pen
         context.beginPath();
 
@@ -46,6 +43,11 @@ module.exports = {
 
         // Clip off the region you drew on
         context.clip();
+
+        // Draw a shape onto the main canvas
+        context.drawImage(avatar, 25, 25, 200, 200);
+
+        context.restore();
 
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
