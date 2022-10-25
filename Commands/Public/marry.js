@@ -21,7 +21,7 @@ module.exports = {
         const canvas = Canvas.createCanvas(700, 250);
 		const context = canvas.getContext('2d');
 
-        const background = await Canvas.loadImage('../../Img/marry-back.jpeg');
+        const background = await Canvas.loadImage('./Img/marry-back.jpeg');
 
         // This uses the canvas dimensions to stretch the image onto the entire canvas
         context.drawImage(background, 0, 0, canvas.width, canvas.height);
