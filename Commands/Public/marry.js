@@ -1,5 +1,6 @@
 const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const Database = require("../../Schemas/Marriages");
+const Canvas = require('@napi-rs/canvas');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -17,8 +18,15 @@ module.exports = {
         const { options, guild, member } = interaction;
         const target = options.getMember("target");
 
+        const canvas = Canvas.createCanvas(700, 250);
+		const context = canvas.getContext('2d');
+
+        const Embed = new EmbedBuilder()
+            .setColor("LuminousVividPink")
+            .setTitle(`🌷 ${member} married ${target} 🌷`)
+
         return interaction.reply({
-            content: "Teste"
+            embeds: [Embed]
         });
 
         // Member
