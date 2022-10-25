@@ -36,7 +36,7 @@ module.exports = {
         context.beginPath();
 
         // Start the arc to form a circle
-        context.arc(125, 125, 100, 0, Math.PI * 2, true);
+        context.arc(150, 150, 75, 0, Math.PI * 2, true);
 
         // Put the pen down
         context.closePath();
@@ -45,7 +45,7 @@ module.exports = {
         context.clip();
 
         // Draw a shape onto the main canvas
-        context.drawImage(avatar, 25, 25, 200, 200);
+        context.drawImage(avatar, 50, 50, 150, 150);
 
         context.restore();
 
