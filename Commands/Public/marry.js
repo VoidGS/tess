@@ -23,31 +23,17 @@ module.exports = {
 
         const background = await Canvas.loadImage('./Img/marry-back.jpg');
 
-        // This uses the canvas dimensions to stretch the image onto the entire canvas
         context.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-        // Using undici to make HTTP requests for better performance
-        const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
+        const memberAvatar = await Canvas.loadImage(member.displayAvatarURL({ extension: 'jpg' }));
 
-        // If you don't care about the performance of HTTP requests, you can instead load the avatar using
-        // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
-
-        // Pick up the pen
         context.beginPath();
-
-        // Start the arc to form a circle
         context.arc(150, 125, 75, 0, Math.PI * 2, true);
-
-        // Put the pen down
         context.closePath();
-
-        // Clip off the region you drew on
         context.clip();
-
         context.restore();
 
-        // Draw a shape onto the main canvas
-        context.drawImage(avatar, 75, 50, 150, 150);
+        context.drawImage(memberAvatar, 75, 50, 150, 150);
 
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
