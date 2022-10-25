@@ -33,7 +33,7 @@ module.exports = {
         // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
 
         // Draw a shape onto the main canvas
-        context.drawImage(avatar, 50, 50, 150, 150);
+        context.drawImage(avatar, 25, 25, 200, 200);
 
         // Pick up the pen
         context.beginPath();
