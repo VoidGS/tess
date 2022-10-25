@@ -27,8 +27,7 @@ module.exports = {
         context.drawImage(background, 0, 0, canvas.width, canvas.height);
 
         // Using undici to make HTTP requests for better performance
-        const { body } = await request(interaction.user.displayAvatarURL({ extension: 'jpg' }));
-        const avatar = await Canvas.loadImage(await body.arrayBuffer());
+        const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
 
         // If you don't care about the performance of HTTP requests, you can instead load the avatar using
         // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
