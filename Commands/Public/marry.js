@@ -36,7 +36,7 @@ module.exports = {
 
         return interaction.reply({
             embeds: [Embed],
-            files: attachment
+            files: [attachment]
         });
 
         // Member
