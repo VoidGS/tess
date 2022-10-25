@@ -1,4 +1,4 @@
-const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
 const Database = require("../../Schemas/Marriages");
 const Canvas = require('@napi-rs/canvas');
 
@@ -21,9 +21,18 @@ module.exports = {
         const canvas = Canvas.createCanvas(700, 250);
 		const context = canvas.getContext('2d');
 
+        const background = await Canvas.loadImage('../../Img/marry-back.jpeg');
+
+        // This uses the canvas dimensions to stretch the image onto the entire canvas
+        context.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+        // Use the helpful Attachment class structure to process the file for you
+        const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
+
         const Embed = new EmbedBuilder()
             .setColor("LuminousVividPink")
             .setDescription(`**🌷 ${member} married ${target} 🌷**`)
+            .setImage('attachment://marriage.png');
 
         return interaction.reply({
             embeds: [Embed]
