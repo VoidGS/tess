@@ -35,6 +35,16 @@ module.exports = {
 
         context.drawImage(memberAvatar, 75, 50, 150, 150);
 
+        const targetAvatar = await Canvas.loadImage(target.displayAvatarURL({ extension: 'jpg' }));
+
+        context.beginPath();
+        context.arc(550, 125, 75, 0, Math.PI * 2, true);
+        context.closePath();
+        context.clip();
+        context.restore();
+
+        context.drawImage(targetAvatar, 625, 50, 150, 150);
+
         // Use the helpful Attachment class structure to process the file for you
         const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'marriage.png' });
 
