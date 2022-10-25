@@ -34,7 +34,7 @@ module.exports = {
 
         context.drawImage(memberAvatar, 75, 50, 150, 150);
 
-        const targetAvatar = await Canvas.loadImage(target.displayAvatarURL({ extension: 'jpg' }));
+        const targetAvatar = await Canvas.loadImage(target.user.displayAvatarURL({ extension: 'jpg' }));
 
         context.beginPath();
         context.arc(550, 125, 75, 0, Math.PI * 2, true);
