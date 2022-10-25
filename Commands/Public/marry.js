@@ -31,7 +31,6 @@ module.exports = {
         context.arc(150, 125, 75, 0, Math.PI * 2, true);
         context.closePath();
         context.clip();
-        context.restore();
 
         context.drawImage(memberAvatar, 75, 50, 150, 150);
 
@@ -41,7 +40,6 @@ module.exports = {
         context.arc(550, 125, 75, 0, Math.PI * 2, true);
         context.closePath();
         context.clip();
-        context.restore();
 
         context.drawImage(targetAvatar, 625, 50, 150, 150);
 
